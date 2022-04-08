@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CEFC8D9027FFB560004FDF5C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEFC8D8F27FFB560004FDF5C /* main.cpp */; };
+		CEFC8D9927FFD8C3004FDF5C /* memorymanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEFC8D9727FFD8C3004FDF5C /* memorymanager.cpp */; };
+		CEFC8D9E27FFD92B004FDF5C /* wordlist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEFC8D9D27FFD92B004FDF5C /* wordlist.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,12 @@
 /* Begin PBXFileReference section */
 		CEFC8D8C27FFB560004FDF5C /* Project2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Project2; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFC8D8F27FFB560004FDF5C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CEFC8D9627FFD811004FDF5C /* debugmem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = debugmem.h; sourceTree = SOURCE_ROOT; };
+		CEFC8D9727FFD8C3004FDF5C /* memorymanager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = memorymanager.cpp; sourceTree = SOURCE_ROOT; };
+		CEFC8D9A27FFD8EB004FDF5C /* memorymanager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = memorymanager.h; sourceTree = SOURCE_ROOT; };
+		CEFC8D9B27FFD903004FDF5C /* studentinfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = studentinfo.h; sourceTree = SOURCE_ROOT; };
+		CEFC8D9C27FFD917004FDF5C /* wordlist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wordlist.h; sourceTree = SOURCE_ROOT; };
+		CEFC8D9D27FFD92B004FDF5C /* wordlist.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wordlist.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,12 @@
 		CEFC8D8E27FFB560004FDF5C /* Project2 */ = {
 			isa = PBXGroup;
 			children = (
+				CEFC8D9D27FFD92B004FDF5C /* wordlist.cpp */,
+				CEFC8D9C27FFD917004FDF5C /* wordlist.h */,
+				CEFC8D9B27FFD903004FDF5C /* studentinfo.h */,
+				CEFC8D9A27FFD8EB004FDF5C /* memorymanager.h */,
+				CEFC8D9727FFD8C3004FDF5C /* memorymanager.cpp */,
+				CEFC8D9627FFD811004FDF5C /* debugmem.h */,
 				CEFC8D8F27FFB560004FDF5C /* main.cpp */,
 			);
 			path = Project2;
@@ -119,7 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEFC8D9927FFD8C3004FDF5C /* memorymanager.cpp in Sources */,
 				CEFC8D9027FFB560004FDF5C /* main.cpp in Sources */,
+				CEFC8D9E27FFD92B004FDF5C /* wordlist.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
