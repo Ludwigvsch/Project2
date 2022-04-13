@@ -13,7 +13,7 @@
 #define WORDLIST_H
 
 // Uncomment this if you want to play with memory tracer
-//#include"debugmem.h"
+#include"debugmem.h"
 
 /* Globally defined constants
 */

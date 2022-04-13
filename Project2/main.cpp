@@ -28,7 +28,7 @@
 */
 
 // Choose which run to compile
-#define RUN0 //RUN1 RUN2 RUN3 RUN4
+#define RUN5 //RUN1 RUN2 RUN3 RUN4
 
 
 #ifdef RUN0
@@ -196,6 +196,110 @@ int main() {
     
     return 0;
 }
+
+#elif defined RUN5
+#define MAKE_MEMBERS_PUBLIC
+#include"wordlist.h"
+#include<iostream>
+
+using std::cout;
+using std::endl;
+
+//my own tests for every function
+
+int main() {
+    
+    /*Wordlist Constructor*/
+     
+     WordList *wordlist = new WordList(5);
+    
+    /*insert*/
+     
+    wordlist->insert("harry");
+    wordlist->insert("ron");
+    wordlist->insert("hermione");
+    
+    /*Wordlist Copy Constructor*/
+     
+    WordList *newlist(wordlist);
+     
+    
+    
+   /*printList*/
+    
+    newlist->insert("harry");
+    //int retval = newlist->print();
+    
+    /* get*/
+    
+    char* word = wordlist->get(0);
+    if (word != nullptr )
+        cout<<word<< endl;
+    
+    /* count*/
+    for (int i = 0; i < wordlist->count(); i++) {
+            cout << wordlist->get(i) << " ";
+        } //pritns “harry ron Hermione”*/
+    
+    
+    /*Delete
+    //delete wordlist;
+    //delete newlist;
+    //wordlist->~WordList();
+    //newlist->~WordList();*/
+    
+    
+    /*erase*/
+    WordList serenity(10);
+    serenity.insert("Wash");
+    serenity.insert("Book");
+    serenity.insert("River");
+    serenity.insert("Simon");
+    serenity.insert("Kaylee");
+    serenity.insert("Jayne");
+    serenity.insert("Wash");
+    serenity.insert("Inara");
+    serenity.insert("Mal");
+    serenity.print();
+    serenity.erase("Wash");
+    serenity.print();
+    
+    /*prepend */
+     WordList wordlist1(0);
+    wordlist1.insert("mia");
+    wordlist1.insert("susannah"); // num 2, max 2
+    WordList wordlist2(4);
+    wordlist2.insert("dean");
+    wordlist2.insert("holmes");
+    wordlist2.insert("odetta"); // num 3, max 4
+    int retval = wordlist2.prepend(&wordlist1);
+    wordlist2.print(); // print “susannah mia odetta holmes dean\n”
+    // Assuming member variables are public
+    cout << retval<< " "<< wordlist2.n_words << " " << wordlist2.capacity;
+    //prints 2 5 5*/
+    
+    
+    /*sort*/
+     WordList neverwhere(5);
+    neverwhere.insert("Richard");
+    neverwhere.insert("Door");
+    neverwhere.insert("Carabas");
+    neverwhere.insert("Islington");
+    neverwhere.insert("Abbot");
+    neverwhere.sort(false);
+    neverwhere.print(); // prints "Abbot Carabas Door Islington Richard\n"*/
+    
+    /*assignemt operator*/
+     WordList ben(5); // WordList can store 5 words //... Some WordList operations
+    
+    WordList ann(4);
+    ann = ben;
+                   // Should not results in undefined behavior
+    ben = ben; // should not result in undefined behavior*/
+    
+}
+
+
 #else
 
 // Playing with memory tracer.  For this to work you have to uncomment
